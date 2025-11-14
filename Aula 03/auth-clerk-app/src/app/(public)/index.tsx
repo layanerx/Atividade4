@@ -4,7 +4,7 @@ import { Text, View, StyleSheet, Linking } from "react-native";
 import {useSSO} from "@clerk/clerk-expo"
 import * as Liking from "expo-linking"
 import * as WebBrowser from "expo-web-browser"
-// import {router} from "expo-router"
+
 
 WebBrowser.maybeCompleteAuthSession()
 
@@ -18,8 +18,7 @@ export default function SingIn(){
 
             setIsLoading(true)
             const redirectUrl = Liking.createURL("/")
-            // const oAuthFlow = await googleAuth.startSSOFlow(precisa de parametro)
-            // resolver a configuração deste método para usar a conta do google com clerk!
+            
             
             if (oAuthFlow.authSessionResult?.type === 'success'){
                 if(oAuthFlow.setActive){

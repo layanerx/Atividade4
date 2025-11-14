@@ -12,8 +12,8 @@ Notifications.setNotificationHandler({
     shouldShowAlert: true,
     shouldPlaySound: true,
     shouldSetBadge: true,
-    shouldShowBanner: true, // necessário
-    shouldShowList: true,   // necessário
+    shouldShowBanner: true, 
+    shouldShowList: true,  
   }),
 });
 
@@ -82,7 +82,7 @@ export default function Home() {
     );
 
     
-    const date = new Date(selectedDate); // cria uma instância válida
+    const date = new Date(selectedDate); 
 
 await Notifications.scheduleNotificationAsync({
   content: {
@@ -94,7 +94,7 @@ await Notifications.scheduleNotificationAsync({
   },
   trigger: {
     type: SchedulableTriggerInputTypes.DATE,
-    date: date, // aqui tem que ser uma INSTÂNCIA de Date, não "Date"
+    date: date, 
   },
     });
 
@@ -131,7 +131,7 @@ await Notifications.scheduleNotificationAsync({
         <Button icon="refresh" title="Recorrente" onPress={scheduleRecurringNotification} />
       </View>
 
-      {/* Agendamento Personalizado */}
+      {}
       <View style={styles.customScheduler}>
         <Text style={styles.customScheduleText}>
           Lembrete Personalizado —{" "}
@@ -154,7 +154,7 @@ await Notifications.scheduleNotificationAsync({
 
       <Button icon="exit" title="Sair" onPress={() => signOut()} />
 
-      {/* Time Picker */}
+      {}
       {showPicker && (
         <DateTimePicker
           value={selectedDate}
@@ -165,7 +165,7 @@ await Notifications.scheduleNotificationAsync({
         />
       )}
 
-      {/* Histórico de Notificações */}
+      {}
       <Text style={styles.historyTitle}>Histórico de Notificações</Text>
 
       <FlatList
